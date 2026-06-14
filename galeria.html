@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paróquia Santo Antônio de Pádua</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="icone">
+            <img src="imagens/index/icone.png" alt="icone-menu">
+        </div>
+        
+    <button class="menu-toggle" id="menu-toggle">☰</button>    
+    
+    <nav id="menu">
+        <a href="index.html">INÍCIO</a>
+        <a href="programacao.html">PROGRAMAÇÃO</a>
+        <a href="trezena.html">TREZENA</a>
+        <a href="galeria.html">GALERIA</a>
+    </nav>
+
+    </header>
+    
+    <main>
+        <section class="banner">
+            <img src="imagens/index/banner4.jpg" alt="banner-paróquia">
+        </section>
+        <section class="apresentacao">
+            <div class="galeria-paroquia">
+                <img src="imagens/galeria/antiga1.jpg" class="miniatura ativa" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/antiga2.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/antiga3.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/antiga4.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/5.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/6.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/7.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/8.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/9.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/galeria/10.jpg" class="miniatura" onclick="trocarImagem(this)">
+            </div>
+            <div class="imagem-principal">
+                <img src="imagens/galeria/antiga1.jpg"
+                alt="Paróquia">
+            </div>
+            <div class="sobre-texto">
+                <h2>Fotos antigas da comunidade</h2> 
+            </div>
+        </section>
+
+        <section class="apresentacao">
+            <div class="galeria-paroquia">
+                <img src="imagens/capela/capela1.jpg" class="miniatura ativa" onclick="trocarImagem(this)">
+                <img src="imagens/capela/capela2.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/capela/capela3.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/capela/capela4.jpg" class="miniatura" onclick="trocarImagem(this)">
+            </div>
+             <div class="imagem-principal">
+                <img src="imagens/capela/capela1.jpg"
+                alt="Primeira igreja">
+            </div>
+            <div class="sobre-texto">
+                <h2>Primeira igreja e sua reforma</h2> 
+            </div>
+        </section>
+
+        <section class="apresentacao">
+            <div class="galeria-paroquia">
+                <img src="imagens/matriz antiga/m.jpg" class="miniatura ativa" onclick="trocarImagem(this)">
+                <img src="imagens/matriz antiga/m1.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/matriz antiga/m2.jpg" class="miniatura" onclick="trocarImagem(this)">
+            </div>
+            <div class="imagem-principal">
+                <img src="imagens/matriz antiga/m.jpg"
+                alt="Paróquia">
+            </div>
+            <div class="sobre-texto">
+                <h2>Antiga matriz</h2> 
+            </div>
+        </section>
+
+        <section class="apresentacao">
+            <div class="galeria-paroquia">
+                <img src="imagens/construção/ma1.jpg" class="miniatura ativa" onclick="trocarImagem(this)">
+                <img src="imagens/construção/ma2.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/construção/ma3.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/construção/ma4.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/construção/ma5.jpg" class="miniatura" onclick="trocarImagem(this)">
+                <img src="imagens/construção/ma6.jpg" class="miniatura" onclick="trocarImagem(this)">
+            </div>
+            <div class="imagem-principal">
+                <img src="imagens/construção/ma1.jpg"
+                alt="Paróquia">
+            </div>
+            <div class="sobre-texto">
+                <h2>Construção da atual matriz</h2> 
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="brasão-paroquial">
+            <img src="imagens/index/brasão paroquial.png" alt="brasão">
+        </div>
+
+        <div class="info-footer">
+            <p>
+                Paróquia Santo Antônio de Pádua <br>
+                Campos Verdes - GO <br>
+                © 2026 Todos os direitos reservados <br>
+                Desenvolvido por Deivid Matos
+            </p>
+        </div>
+
+        <div id="redes-sociais">
+            <a href="https://www.instagram.com/parsantoantoniodepadua/"
+            target="_blank"
+            rel="noopener">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/paroquiasantoantonio.camposverdes?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+            target="_blank"
+            rel="noopener">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+        </div>
+    </footer>
+
+<script src="javascript/script.js"></script>
+</body>
+</html>

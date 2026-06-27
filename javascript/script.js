@@ -9,19 +9,43 @@ botao.addEventListener('click', () => {
 });
 function trocarImagem(imagem){
 
-    const apresentacao =
-        imagem.closest('.apresentacao');
+    const apresentacao = imagem.closest('.apresentacao');
 
-    const principal =
-        apresentacao.querySelector('.imagem-principal img');
+    const principal = apresentacao.querySelector('.imagem-principal img');
 
-    principal.src = imagem.src;
+    principal.style.opacity = "0";
+
+    setTimeout(() => {
+
+        principal.src = imagem.src;
+
+        principal.style.opacity = "1";
+
+    },150);
 
     apresentacao
-        .querySelectorAll('.miniatura')
-        .forEach(img =>
-            img.classList.remove('ativa')
-        );
+        .querySelectorAll(".miniatura")
+        .forEach(img => img.classList.remove("ativa"));
 
-    imagem.classList.add('ativa');
+    imagem.classList.add("ativa");
 }
+
+const elementos = document.querySelectorAll(".animar");
+
+const observador = new IntersectionObserver((entradas, observer)=>{
+
+    entradas.forEach(entrada=>{
+
+        if(entrada.isIntersecting){
+
+            entrada.target.classList.add("mostrar");
+
+            observer.unobserve(entrada.target);
+
+        }
+
+    });
+
+});
+
+elementos.forEach(elemento=>observador.observe(elemento));

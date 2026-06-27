@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Montserrat;
@@ -32,9 +36,15 @@ nav {
     gap: 15px;
 }
 
-nav a {
+nav a{
     color: #a75615;
     text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #7c3e0f;
 }
 
 .menu-toggle {
@@ -58,12 +68,52 @@ nav a {
     display: block;
 }
 
+.animar{
+    opacity:0;
+    transform:translateY(20px);
+    transition:
+        opacity .45s ease,
+        transform .45s ease;
+}
+
+.animar.mostrar{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.palavra-paroco{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 10%;
+}
+
+.foto-paroco img{
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.palavra{
+    flex: 1;
+}
+
+.palavra h2{
+    color: #a75615;
+    text-align: left;
+}
+
+.palavra p{
+    line-height: 1.8;
+    text-align: justify;
+}
 .apresentacao{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
     padding: 50px;
+    background-color: #f0ede6;
 }
 
 .galeria-paroquia {
@@ -96,6 +146,9 @@ nav a {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+}
+.imagem-principal img{
+    transition: opacity .25s ease, transform .25s ease;
 }
 
 .sobre-texto{
@@ -134,16 +187,11 @@ h2 {
     text-align: center;
 }
 
-.clique-abaixo h3 {
-    text-align: end;
-
-}
 .capela{
     width: 300px;
     padding: 25px;
     border-radius: 20px;
     background: #f0ede6;
-    backdrop-filter: blur(8px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     text-align: center;
     transition: 0.3s;
@@ -160,6 +208,18 @@ h2 {
 
 .capela p {
     color: #555;
+}
+
+.capela a{
+    color: #a75615;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.capela a:hover{
+    color: #7c3e0f;
+    text-decoration: underline;
 }
 
 .trezena{
@@ -230,6 +290,12 @@ footer{
     transform:scale(1.15);
 }
 @media (max-width: 768px) {
+
+    .animar{
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 
     .menu-toggle {
         display: block;
@@ -304,16 +370,30 @@ footer{
         display: block;
     }
 
+    .palavra-paroco{
+    flex-direction: column;
+    text-align: center;
+    }
+
+    .foto-paroco img{
+    width: 180px;
+    }
+
+    .palavra h2{
+    text-align: center;
+    }
+
     .apresentacao{
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+        align-items: flex-start;
     }
 
     .galeria-paroquia{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(5, 60px);
+        gap: 8px;
     }
 
     .miniatura{
@@ -333,13 +413,17 @@ footer{
     }
 
     footer{
-        flex-direction: column;
-        gap: 20px;
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 20px;
+    }
+    
+    .brasão-paroquial{
+    justify-self: center;
     }
 
-    .brasão-paroquial{
-        flex-direction: column;
+    #redes-sociais{
+        justify-self: center;
     }
 
 }
